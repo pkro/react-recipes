@@ -13,3 +13,9 @@ After adding
 to "scripts" in package.json, the build can be run with 
 
 yarn build
+
+To build webpack in bundle.js:
+node_modules/.bin/webpack ./index.js -o ./bundle.js
+
+After adding path etc to webpack.config.js we can just run
+node_modules/.bin/webpack
