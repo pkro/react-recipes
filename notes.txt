@@ -1,0 +1,7 @@
+Transpile es6 to es2015:
+./node_modules/.bin/babel index.js -o ./bundle.js --presets=es2015
+
+-> this creates ./bundle.js
+
+If es2015 added in .babelrc:
+./node_modules/.bin/babel index.js -o ./bundle.js
