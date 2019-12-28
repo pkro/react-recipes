@@ -2,7 +2,7 @@
 
 # Created by https://www.gitignore.io/api/visualstudiocode,linux,node
 # Edit at https://www.gitignore.io/?templates=visualstudiocode,linux,node
-
+dist/
 ### Linux ###
 *~
 
