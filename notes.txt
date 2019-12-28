@@ -5,3 +5,11 @@ Transpile es6 to es2015:
 
 If es2015 added in .babelrc:
 ./node_modules/.bin/babel index.js -o ./bundle.js
+
+After adding 
+
+"build": "./node_modules/.bin/babel ./index.js -o ./bundle.js"
+
+to "scripts" in package.json, the build can be run with 
+
+yarn build
