@@ -13,6 +13,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "babel-loader": "^7",
     "babel-preset-es2015": "^6.24.1"
   }
 }
