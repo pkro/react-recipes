@@ -10,8 +10,8 @@ const App = () => {
             <div>
                 <Header />
                 <main style={{display: 'flex'}}>
-                    <RecipeList />
-                    <RecipeDetail />
+                    <RecipeList style={{flex: 3}}/>
+                    <RecipeDetail style={{flex: 5}} />
                 </main>
             </div>
         )
