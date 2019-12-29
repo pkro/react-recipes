@@ -22,3 +22,7 @@ node_modules/.bin/webpack
 
 To automate, we can make a webpack.config.js, see comments there
 
+Now we can change the build in oackage.json to webpack, as webpack is now used to build and it already calls babel in it's config:
+"build": "./node_modules/.bin/babel ./index.js -o ./bundle.js"
+-> 
+"build": "./node_modules/.bin/webpack"
