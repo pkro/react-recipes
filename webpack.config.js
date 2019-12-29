@@ -1,9 +1,12 @@
+const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/index.js', // start point from where dependencies are searched
+    context: path.join(__dirname, 'src'), // source directory so we don't have to add it everywhere below by hand ("root", so still use ./)
+    entry: './index.js', // start point from where dependencies are searched
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname, 'dist'), // output transpiled to dist folder 
         filename: 'bundle.js',
     },
     module: { // optional modules defined in rules (there can be many objects under rules)
@@ -14,5 +17,12 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',
+            inject: 'body' // where the script tag gets injected in the html
+        }),
+    ],
+    
     mode: 'development'
   };
