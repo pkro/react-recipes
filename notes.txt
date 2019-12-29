@@ -1,3 +1,5 @@
+Basic webpack / babel setup:
+
 Transpile es6 to es2015:
 ./node_modules/.bin/babel index.js -o ./bundle.js --presets=es2015
 
@@ -30,4 +32,27 @@ Now we can change the build in package.json to webpack, as webpack is now used t
 After adding webpack-dev-server, we can change 
 "start": "node ./index.js", -> this doesn't exist anymore as we moved it to "src", as we specify in webpack.config.js
 to 
-"start": "./node_modules/.bin/webpack-dev-server",
+"start": "./node_modules/.bin/webpack-dev-server"
+
+For bundling binary / static files, refer tocomments in webpack config
+--------------------------------------------------------------------
+
+React:
+
+functional components vs class components:
+functional comp are
+- shorter
+- easy to test (are normal functions)
+- no state or lifecycle hooks
+
+props:
+- component parameters
+- never modify! (inside component)
+- any time of data (numbers, array, objects, functions...)
+- in class coomponents accessed with this.props
+- in functional components passes as arguments
+
+propTypes:
+- prevent bugs in props
+- logs errors to 
+- comes in package 'prop-types'
