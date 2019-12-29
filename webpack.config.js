@@ -6,7 +6,7 @@ require('dotenv').config(); // searches for .env file and loads any variable def
 
 module.exports = {
     context: path.join(__dirname, 'src'), // source directory so we don't have to add it everywhere below by hand ("root", so still use ./)
-    entry: './index.js', // start point from where dependencies are searched
+    entry: ['whatwg-fetch', './index.js'], // start point(s) from where dependencies are searched
     output: {
         path: path.resolve(__dirname, 'dist'), // output transpiled to dist folder 
         filename: 'bundle.js',
