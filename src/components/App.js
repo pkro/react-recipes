@@ -13,8 +13,8 @@ class App extends React.Component {
             currentRecipe: null,
         }
 
-        this.onRecipeClick = this.onRecipeClick.bind(this); // otherwise, "this" is not bound to the class but to the RecipeList component
-                                                            // Workaround: define onRecipeClick as an arrow function
+        //this.onRecipeClick = this.onRecipeClick.bind(this); // otherwise, "this" is not bound to the class but to the RecipeList component
+                                                            // Workaround: define onRecipeClick as an arrow function and install babel-preset-stage-0
     }
 
     componentDidMount() {
@@ -28,8 +28,7 @@ class App extends React.Component {
         
     }
     
-    onRecipeClick = (id) {
-        console.log(`${API_URL}/v1/recipes/${id}`);
+    onRecipeClick = (id) => {
         fetch(`${API_URL}/v1/recipes/${id}`)
         .then(res => res.json())
         .then(json => {
