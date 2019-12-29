@@ -22,7 +22,12 @@ node_modules/.bin/webpack
 
 To automate, we can make a webpack.config.js, see comments there
 
-Now we can change the build in oackage.json to webpack, as webpack is now used to build and it already calls babel in it's config:
+Now we can change the build in package.json to webpack, as webpack is now used to build and it already calls babel in it's config:
 "build": "./node_modules/.bin/babel ./index.js -o ./bundle.js"
 -> 
 "build": "./node_modules/.bin/webpack"
+
+After adding webpack-dev-server, we can change 
+"start": "node ./index.js", -> this doesn't exist anymore as we moved it to "src", as we specify in webpack.config.js
+to 
+"start": "./node_modules/.bin/webpack-dev-server",
