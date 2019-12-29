@@ -19,3 +19,6 @@ node_modules/.bin/webpack ./index.js -o ./bundle.js
 
 After adding path etc to webpack.config.js we can just run
 node_modules/.bin/webpack
+
+To automate, we can make a webpack.config.js, see comments there
+

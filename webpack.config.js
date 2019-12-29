@@ -1,16 +1,16 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './index.js',
+    entry: './index.js', // start point from where dependencies are searched
     output: {
         path: __dirname,
         filename: 'bundle.js',
     },
-    module: {
+    module: { // optional modules defined in rules (there can be many objects under rules)
         rules: [
             {
-                test: /\.js$/,
-                loader: 'babel-loader'
+                test: /\.js$/, // test for this regex
+                loader: 'babel-loader' // ... use this module to preprocess
             }
         ]
     },
