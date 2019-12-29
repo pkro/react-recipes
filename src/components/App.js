@@ -1,11 +1,18 @@
 import React from 'react';
-import Logo from './static/images/pkro.png'
+import Logo from '../static/images/pkro.png'
+
+import Header from './Header';
+import RecipeList from './RecipeList';
+import RecipeDetail from './RecipeDetail';
 
 const App = () => {
         return (
             <div>
-            <h1>Hello World from React Function</h1>
-            <img src={Logo} />
+                <Header />
+                <main style={{display: 'flex'}}>
+                    <RecipeList />
+                    <RecipeDetail />
+                </main>
             </div>
         )
 }
