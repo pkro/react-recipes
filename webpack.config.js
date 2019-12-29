@@ -14,7 +14,12 @@ module.exports = {
             {
                 test: /\.js$/, // test for this regex
                 loader: 'babel-loader' // ... use this module to preprocess
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/, // loader for image files
+                loader: 'file-loader' // now, instead of file content, the loader will return the path of the image
             }
+
         ]
     },
     plugins: [
