@@ -49,10 +49,15 @@ props:
 - component parameters
 - never modify! (inside component)
 - any time of data (numbers, array, objects, functions...)
-- in class coomponents accessed with this.props
+- in class components accessed with this.props
 - in functional components passes as arguments
 
 propTypes:
 - prevent bugs in props
 - logs errors to 
 - comes in package 'prop-types'
+
+
+dotenv:
+yarn add dotenv --dev
+.env file should not be comitted and holds local variables

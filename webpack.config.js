@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+require('dotenv').config(); // searches for .env file and loads any variable defined there
+
 module.exports = {
     context: path.join(__dirname, 'src'), // source directory so we don't have to add it everywhere below by hand ("root", so still use ./)
     entry: './index.js', // start point from where dependencies are searched
@@ -26,6 +28,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html',
             inject: 'body' // where the script tag gets injected in the html
+        }),
+        new webpack.DefinePlugin({
+            API_URL: JSON.stringify(process.env.API_URL),   // replace API_URL (or any name defined here) with value defined in .env file
+                                                            // we could also just use "process.env.API_URL" in the scripts, this is just more comfortable
         }),
     ],
     
