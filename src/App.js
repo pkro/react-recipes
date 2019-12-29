@@ -1,11 +1,9 @@
 import React from 'react';
 
-class App extends React.Component {
-    render() {
+const App = () => {
         return (
-            <h1>Hello World from React</h1>
+            <h1>Hello World from React Function</h1>
         )
-    }
 }
 
 export default App;
