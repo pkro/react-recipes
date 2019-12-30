@@ -1,0 +1,23 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "globals": {
+        "API_URL": true
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "indent": 0,
+        "react/jsx-filename-extension": 0,
+        "react/forbid-prop-types": 0,
+        "react/require-default-props": 0,
+        "no-multi-spaces": 0,
+        "react/destructuring-assignment": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0
+        
+    }
+}
