@@ -62,3 +62,7 @@ dotenv:
 yarn add dotenv --dev
 .env file should not be comitted and holds local variables
 for this project, create the .env file locally, content: API_URL=http://reactrecipes.herokuapp.com
+
+Basscss: small functional css library, has many addons (basscss-btn etc)
+PostCSS: transform style syntax to cross-browser compatible styles using js plugins, like babel does with JS
+    CSSNext: PostCSS plugin to transplile modern CSS to "compatible" CSS (vendor prefixing, variables etc)

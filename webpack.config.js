@@ -20,6 +20,11 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|gif)$/, // loader for image files
                 loader: 'file-loader' // now, instead of file content, the loader will return the path of the image
+            },
+            {
+                test: /\.css$/, // loader for css
+                loader: ['style-loader', 'css-loader', 'postcss-loader'] // loaders are applied last to first from the array
+                // postcss-loader will transpile, css-loader makes it possible to import styles using @import, and style loader will let webpack pack into index html
             }
 
         ]
