@@ -68,3 +68,5 @@ PostCSS: transform style syntax to cross-browser compatible styles using js plug
     CSSNext: PostCSS plugin to transplile modern CSS to "compatible" CSS (vendor prefixing, variables etc)
 
 Linter: detects and flags errors or rules, rules can be user-created
+
+Prettier: Tool for building and enforcing a styleguide by changing code by itself
