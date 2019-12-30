@@ -15,6 +15,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/, // test for this regex
+                exclude: /node_modules/, 
                 loader: 'babel-loader' // ... use this module to preprocess
             },
             {
