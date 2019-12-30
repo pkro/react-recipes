@@ -61,3 +61,4 @@ propTypes:
 dotenv:
 yarn add dotenv --dev
 .env file should not be comitted and holds local variables
+for this project, create the .env file locally, content: API_URL=http://reactrecipes.herokuapp.com
