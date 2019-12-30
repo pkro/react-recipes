@@ -70,3 +70,5 @@ PostCSS: transform style syntax to cross-browser compatible styles using js plug
 Linter: detects and flags errors or rules, rules can be user-created
 
 Prettier: transforms code to match styleguide
+
+Git hook: execute style guide and correctness on each commit
