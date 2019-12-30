@@ -69,4 +69,4 @@ PostCSS: transform style syntax to cross-browser compatible styles using js plug
 
 Linter: detects and flags errors or rules, rules can be user-created
 
-Prettier: Tool for building and enforcing a styleguide by changing code by itself
+Prettier: transforms code to match styleguide
