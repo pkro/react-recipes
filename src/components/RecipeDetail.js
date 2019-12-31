@@ -8,7 +8,7 @@ const RecipeDetail = props => {
             <p
                 className={classNames(
                     'h3 p2 bg-white italic center',
-                    props.className
+                    props.className,
                 )}
                 style={props.style}
             >
