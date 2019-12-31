@@ -1,7 +1,6 @@
 import React from 'react';
 // import Logo from '../static/images/pkro.png';
 
-import Header from './Header';
 import RecipeList from './RecipeList';
 import RecipeDetail from './RecipeDetail';
 
@@ -42,7 +41,6 @@ class Home extends React.Component {
         const { recipes, currentRecipe } = this.state; // es6 object copy
         return (
             <div>
-                <Header />
                 <main className="px4 flex">
                     <RecipeList
                         style={{ flex: 3 }}
