@@ -1,8 +1,20 @@
 import React from 'react';
 // import Logo from '../static/images/pkro.png';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // <img src={Logo} />
+
+const HeaderLink = ( { children, ...props }) => (
+    <NavLink
+        exact
+        className="p1 mx2 black text-decoration-none rounded"
+        activeClassName="bg-white"
+        {...props}
+    >
+        {children}
+    </NavLink>
+);
 
 const Header = () => (
     <header className="flex items-center justify-between px4">
@@ -13,22 +25,14 @@ const Header = () => (
             MyRecipes
         </h1>
         <nav>
-            <NavLink
-                exact
-                to="/"
-                className="p1 mx2 black text-decoration-none rounded"
-                activeClassName="bg-white">
-                Home
-            </NavLink>
-            <NavLink
-                exact
-                to="/favorites"
-                className="p1 mx2 black text-decoration-none rounded"
-                activeClassName="bg-white">
-                Favorites
-            </NavLink>
+            <HeaderLink to="/">Home</HeaderLink>
+            <HeaderLink to="/favorites">Favorites</HeaderLink>
         </nav>
     </header>
 );
+
+HeaderLink.propTypes = {
+    children: PropTypes.node,
+}
 
 export default Header;
