@@ -9,6 +9,7 @@ const Favorites = ({ state, toggleFavorite }) => (
             recipes={state.recipes.filter(f => state.favorites.includes(f.id))}
             favorites={state.favorites}
             onFavorited={toggleFavorite}
+            // toDo: onClick handler to redirect to /recipe/:id
         />
     </div>
 );

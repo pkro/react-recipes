@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const RecipeDetail = props => {
     if (props.recipe === null) {
@@ -41,6 +42,11 @@ const RecipeDetail = props => {
                     <li key={step}>{step}</li>
                 ))}
             </ol>
+            <Link
+                to={`/recipe/${props.recipe.id}`}
+            >
+                    See more
+            </Link>
         </div>
     );
 };
