@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'), // output transpiled to dist folder
         filename: 'bundle.js',
+        publicPath: '/', // otherwise, with routes like /blah/1 the browser will look for /blah/bundle.js
     },
     module: { // optional modules defined in rules (there can be many objects under rules)
         rules: [
